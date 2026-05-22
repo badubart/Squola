@@ -1,0 +1,82 @@
+@startuml
+
+boundary ":InterfejsUżytkownika" as UI
+control ":KosztorysController" as Controller
+entity ":Usługi" as Usługi
+entity ":Czesci" as Czesci
+entity ":Kosztorys" as Kosztorys
+
+entity ":BazaDanych" as BazaDanych
+
+activate UI
+
+UI -> Controller: utwórzKosztorys()
+activate Controller
+
+Controller -> BazaDanych: pobierzIdentyfikator()
+activate BazaDanych
+BazaDanych --> Controller: id
+deactivate BazaDanych
+Controller -> Kosztorys: utworzKosztorys(id)
+activate Kosztorys
+
+
+UI -> Controller: wybierzCzesci()
+Controller -> Czesci: pobierzCzęść(nazwa)
+activate Czesci
+Czesci --> Controller: Część
+
+deactivate Czesci
+Controller --> UI: potwierdzenie
+
+UI -> Controller: wybierzUsługę()
+
+Controller -> Usługi: pobierzUsługę(nazwa)
+activate Usługi
+Controller -> Usługi: doddajUsługęNiesandardową()
+Usługi -> Usługi: utwórzUsługęNiestandardową()
+Usługi --> Controller: Usługa
+deactivate Usługi
+
+Controller --> UI: potwierdzenie
+
+UI->Controller: dodajModel()
+
+Controller -> Kosztorys: dodajModel(Model)
+Controller-->UI:potwierdzenie
+UI->Controller: dodajCzęść()
+Controller -> Kosztorys: dodajCzęść(Część, ilość)
+Controller-->UI:potwierdzenie
+UI->Controller: dodajUsługę()
+Controller -> Kosztorys: dodajUsługę(Usługa, ilość)
+Controller-->UI:potwierdzenie
+UI -> Controller: pokazKosztorys()
+Controller -> Kosztorys: zobaczKosztorys()
+Kosztorys --> Controller: Kosztorys
+Controller-->UI: podglądKosztorysu
+UI -> Controller: zatwierdź()
+Controller -> Kosztorys: zatwierdzKosztorys()
+Kosztorys --> Controller: potwierdzenie()
+deactivate Kosztorys
+
+UI -> Controller: zapiszZamowienie()
+Controller -> BazaDanych: zapisz(id)
+activate BazaDanych
+BazaDanych --> Controller: potwierdzenie
+deactivate BazaDanych
+
+
+deactivate Kosztorys
+Controller --> UI: potwierdzenie
+
+UI->Controller: weryfikujKosztorys()
+Controller -> Kosztorys: weryfikuj()
+activate Kosztorys
+Kosztorys --> Controller: status
+deactivate Kosztorys
+Controller --> UI: status
+
+deactivate Controller
+deactivate UI
+@enduml
+
