@@ -1,0 +1,100 @@
+@startuml
+title Zarządzanie systemem przez właściciela
+
+actor "Właściciel" as Owner
+
+boundary "Frontend UI" as UI
+
+control "EmployeeService" as EmpSvc
+control "PricingService" as PricingSvc
+control "ReportService" as RptSvc
+control "StatisticsService" as StatsSvc
+control "NotificationService" as NotifSvc
+
+entity "Employee" as Employee
+entity "LessonPrice" as LessonPrice
+entity "Report" as Report
+
+database "Database" as DB
+
+
+== Zarządzanie pracownikami ==
+
+Owner -> UI : Otwiera "Zarządzaj kadrą"
+UI -> EmpSvc : getEmployees()
+
+EmpSvc -> Employee : pobierz pracowników
+Employee -> DB : SELECT employees
+DB --> Employee : lista pracowników
+
+Employee --> EmpSvc : dane pracowników
+EmpSvc --> UI : lista pracowników
+UI --> Owner : Wyświetlenie kadry
+
+Owner -> UI : Dodaje nowego pracownika
+UI -> EmpSvc : createEmployee(employeeData)
+
+EmpSvc -> Employee : utwórz pracownika
+Employee -> DB : INSERT employee
+DB --> Employee : employeeId
+
+Employee --> EmpSvc : sukces
+EmpSvc --> UI : Potwierdzenie dodania
+UI --> Owner : Pracownik dodany
+
+EmpSvc -> NotifSvc : sendNotification(email, "Nowy pracownik dodany")
+NotifSvc --> EmpSvc : Powiadomienie wysłane
+
+== Ustalanie cen ==
+
+Owner -> UI : Otwiera "Ustal ceny"
+UI -> PricingSvc : getCurrentPrices()
+
+PricingSvc -> LessonPrice : pobierz ceny
+LessonPrice -> DB : SELECT lesson_prices
+DB --> LessonPrice : lista cen
+
+LessonPrice --> PricingSvc : ceny
+PricingSvc --> UI : aktualne ceny
+UI --> Owner : Wyświetlenie cen
+
+Owner -> UI : Zmienia cenę zajęć
+UI -> PricingSvc : updatePrice(subject, price)
+
+PricingSvc -> LessonPrice : aktualizuj cenę
+LessonPrice -> DB : UPDATE lesson_prices
+DB --> LessonPrice : zapisano
+
+LessonPrice --> PricingSvc : sukces
+PricingSvc --> UI : Potwierdzenie aktualizacji
+UI --> Owner : Cena zaktualizowana
+
+PricingSvc -> NotifSvc : sendNotification(teacherEmail, "Zmieniono ceny zajęć")
+NotifSvc --> PricingSvc : Powiadomienie wysłane
+
+== Generowanie raportu ==
+
+Owner -> UI : Kliknięcie "Generuj raport"
+UI -> RptSvc : generateFinancialReport()
+
+RptSvc -> DB : pobierz dane finansowe
+DB --> RptSvc : dane płatności i rezerwacji
+
+RptSvc -> Report : wygeneruj raport PDF
+
+Report --> RptSvc : raport gotowy
+RptSvc --> UI : plik raportu
+UI --> Owner : Pobranie raportu
+
+== Podsumowanie systemu ==
+
+Owner -> UI : Otwiera "Podsumowanie"
+UI -> StatsSvc : getDashboardStatistics()
+
+StatsSvc -> DB : pobierz statystyki
+DB --> StatsSvc : dane systemowe
+
+StatsSvc --> UI : liczba uczniów,\nprzychody,\nobłożenie zajęć
+UI --> Owner : Dashboard statystyk
+
+@enduml

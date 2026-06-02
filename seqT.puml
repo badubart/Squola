@@ -1,0 +1,109 @@
+@startuml
+autonumber
+skinparam BoxPadding 10
+skinparam ParticipantPadding 10
+
+actor "Nauczyciel (Teacher)" as Teacher
+    participant "Interfejs UI" as UI
+    participant "ReservationService" as BookingSvc
+    participant "RoomService" as RoomSvc
+    participant "LessonService" as LessonSvc
+    participant "MaterialService" as MaterialSvc
+    participant "NotificationService" as NotifSvc
+database "Baza Danych" as DB
+
+== WYBÓR I DEKLARACJA GODZIN PRACY / GRAFIKU (Scenariusz 1.7) ==
+Teacher -> UI : Przejście do ustawień profilu / Zakładka "Zmień dostępne terminy"
+UI -> BookingSvc : getTeacherAvailability(teacherId)
+BookingSvc -> DB : Pobierz aktualny grafik i przypisane lekcje
+DB --> BookingSvc : Lista aktualnych lekcji
+BookingSvc --> UI : Dane grafiku nauczyciela
+UI --> Teacher : Wyświetlenie siatki godzin
+
+Teacher -> UI : Zaznaczenie wolnych bloków czasowych (Wybór zajęć/godzin)
+Teacher -> UI : Kliknięcie "Zapisz"
+UI -> BookingSvc : updateAvailability(teacherId, selectedSlotsList)
+
+alt Brak konfliktów z istniejącymi, opłaconymi rezerwacjami
+    BookingSvc -> DB : Zapisz zmiany
+    DB --> BookingSvc : Potwierdzenie zapisu
+    BookingSvc -> NotifSvc : sendNotification(adminPhone, "Nauczyciel zmienił dostępne terminy")
+    NotifSvc --> BookingSvc : Powiadomienie wysłane
+    BookingSvc --> UI : Potwierdzenie zmian
+    UI --> Teacher : Komunikat: "Udana aktualizacja czasu pracy. Poinformowano administrację."
+else Występuje konflikt (próba usunięcia terminu, gdzie uczeń opłacił już lekcję)
+    BookingSvc -> DB : Zweryfikuj statusy powiązanych rezerwacji (Lesson / Reservation)
+    DB --> BookingSvc : Wykryto aktywne rezerwacje uczniów
+    BookingSvc --> UI : Odmowa zapisu (Wymagany kontakt z biurem)
+    UI --> Teacher : Błąd: "Zmiana wymaga zatwierdzenia przez administratora ze względu na rezerwacje."
+end
+
+== Przebieg Lekcji: Sprawdzanie Obecności (Scenariusz 3.2) ==
+Teacher -> UI : Kliknięcie "Sprawdź obecność" przy bieżącej lekcji
+UI -> LessonSvc : getActiveLessonDetails(teacherId, datetime)
+LessonSvc -> DB : Pobierz lekcję i listę studentów
+DB --> LessonSvc : Lesson + Students list
+LessonSvc --> UI : Lista studentów
+UI --> Teacher : Wyświetlenie formularza obecności
+
+Teacher -> UI : Oznaczenie Obecny/Nieobecny + "Zatwierdź"
+UI -> LessonSvc : saveAttendance(lessonId, attendanceList)
+loop Dla każdego studenta
+    LessonSvc -> DB : Utwórz/Aktualizuj wpis Attendance (isPresent)
+end
+DB --> LessonSvc : Zapisano
+loop Wysłanie powiadomienia do nieobecnych uczniów
+    LessonSvc -> NotifSvc : sendNotification(studentPhone, "Byłeś nieobecny na lekcji")
+    NotifSvc --> LessonSvc : Powiadomienie wysłane
+end
+LessonSvc --> UI : Sukces
+UI --> Teacher : Komunikat: "Pomyślnie oznaczono obecność"
+
+== Dodawanie Raportu i Notatek o Postępach (Scenariusz 3.4) ==
+Teacher -> UI : Wybór profilu ucznia -> "Dodaj notatki"
+Teacher -> UI : Wpisanie treści uwag i kliknięcie "Zatwierdź"
+
+alt Treść notatki nie jest pusta
+    UI -> LessonSvc : createProgressReport(studentId, lessonId, content)
+    LessonSvc -> DB : Zapisz obiekt ProgressReport
+    DB --> LessonSvc : Potwierdzenie (czas < 3s)
+    LessonSvc -> NotifSvc : sendNotification(studentPhone, "Nauczyciel dodał notatkę o Twoim postępie")
+    NotifSvc --> LessonSvc : Powiadomienie wysłane
+    LessonSvc --> UI : Sukces
+    UI --> Teacher : Wyświetlenie zaktualizowanej historii
+else Treść notatki jest pusta
+    UI --> Teacher : Błąd: "Pole nie może być puste!"
+end
+
+== Udostępnianie Materiałów (Scenariusz 2.1) ==
+Teacher -> UI : Sekcja "Materiały" -> Wybór pliku i kliknięcie "Prześlij"
+UI -> UI : Walidacja rozmiaru (validateFileSize)
+
+alt Rozmiar pliku <= 100 MB
+    UI -> MaterialSvc : uploadMaterial(lessonId, file)
+    MaterialSvc -> DB : Zapisz obiekt Material
+    DB --> MaterialSvc : Potwierdzenie zapisu
+    MaterialSvc --> UI : Sukces (Plik udostępniony)
+    UI --> Teacher : Komunikat: "Materiały zostały przesłane"
+else Rozmiar pliku > 100 MB
+    UI --> Teacher : Błąd: "Przekroczono limit 100 MB"
+end
+
+== Dostępność i Wybór Sali Lekcyjnej (Scenariusz 2.3) ==
+Teacher -> UI : Przejście do sekcji "Moje lekcje" -> Wybór lekcji
+UI -> RoomSvc : getAvailableRooms(dateTime, subject)
+RoomSvc -> DB : Pobierz listę dostępnych sal
+DB --> RoomSvc : Lista sal z informacją o dostępności
+RoomSvc --> UI : Dane dostępnych sal
+UI --> Teacher : Wyświetlenie listy sal z numerami, pojemnością i wyposażeniem
+
+Teacher -> UI : Wybór preferowanej sali i zatwierdzenie
+UI -> RoomSvc : requestRoomAssignment(lessonId, roomId)
+RoomSvc -> DB : Zarezerwuj salę dla lekcji
+DB --> RoomSvc : Potwierdzenie rezerwacji
+RoomSvc -> NotifSvc : sendNotification(adminEmail, "Nauczyciel przesłał prośbę o salę")
+NotifSvc --> RoomSvc : Powiadomienie wysłane
+RoomSvc --> UI : Potwierdzenie
+UI --> Teacher : Komunikat: "Prośba o przypisanie sali została przesłana do administracji"
+
+@enduml
