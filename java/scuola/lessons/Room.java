@@ -1,0 +1,48 @@
+package scuola.lessons;
+
+/**
+ * Sala lekcyjna, w której mogą odbywać się zajęcia.
+ */
+public class Room {
+
+    private String name;
+    private int capacity;
+    private String equipment;
+
+    public Room() {
+    }
+
+    public Room(String name, int capacity) {
+        this(name, capacity, "");
+    }
+
+    public Room(String name, int capacity, String equipment) {
+        this.name = name;
+        this.capacity = capacity;
+        this.equipment = equipment;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public int getCapacity() {
+        return capacity;
+    }
+
+    public void setCapacity(int capacity) {
+        this.capacity = capacity;
+    }
+
+    public String getEquipment() {
+        return equipment;
+    }
+
+    public void setEquipment(String equipment) {
+        this.equipment = equipment;
+    }
+}
