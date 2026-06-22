@@ -1,0 +1,15 @@
+Rozdział Zadań
+Lab 1
+Wizja, Strona tytuła – Eryk Witkowski
+User Stories – Bartosz Badura
+Lab 2 
+Kryteria akceptacji, Scenariusze testowe, Diagram aktywności – Eryk Witkowski
+Prototyp UI – Bartosz Badura
+Lab 3
+Raport z wywiadu z potencjalnym klientem, Finalizacja UI, Diagram skewencji dla nauczyciela, pracownika i właściciela – Bartosz Badura
+Diagram sekwencji rodzica, Diagram klas – Eryk Witkowski
+Lab 4
+Implementacja Back-Endu, Dokumentacja – Eryk Witkowski
+High Fidelity UI – Bartosz Badura
+
+Nakład pracy na oko 50/50
