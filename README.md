@@ -2,6 +2,7 @@
 
 ![Java](https://img.shields.io/badge/Java-21%2B-orange)
 ![JUnit 5](https://img.shields.io/badge/testy-JUnit%205-blue)
+![Testy](https://img.shields.io/badge/testy-168%20passing-brightgreen)
 
 Projekt zaliczeniowy na laboratorium z Inżynierii Oprogramowania modelujący system zarządzania szkołą korepetycji. 
 
@@ -19,6 +20,8 @@ Warstwa danych jest zrealizowana w pamięci - ona obsługuje zapytania typu
 - [Serwisy](#serwisy)
 - [Struktura projektu](#struktura-projektu)
 - [Wymagania](#wymagania)
+- [Rodzaje testów](#rodzaje-testów)
+- [Uruchamianie testów](#uruchamianie-testów)
 - [Decyzje projektowe](#decyzje-projektowe)
 
 ---
@@ -250,21 +253,39 @@ Scuola/
 │     │                              # MaterialService, ReportService, ProgressReportService, AttendanceService
 │     ├─ notifications/              # NotificationType, Notification, NotificationService
 │     └─ repository/                 # InMemoryRepository + Lesson/Reservation/Room/User/AttendanceRepository
+├─ test/
+│  └─ org/scuola/
+│     ├─ users/ lessons/ attendance/ notifications/ repository/   # testy jednostkowe
+│     ├─ fixtures/                   # TestFixtures — wspólne dane testowe 
+│     └─ acceptance/                 # testy akceptacyjne 
 │─ pom.xml    
 └─ README.md
 ```
-
-- 36 klas produkcyjnych + klasa `Main`.
-
----
-
 ## Wymagania
-
 - **JDK 21 lub nowszy** (projekt rozwijany na JDK 25).
-- Brak narzędzia do budowania (Maven/Gradle) — biblioteka JUnit 5 jest dołączona w katalogu `lib/`.
+---
+## Rodzaje testów
+
+| Rodzaj | Pakiet | Zakres |
+| --- | --- | --- |
+| **Jednostkowe** | `scuola.*` (lustrzane do `src`) | Każda klasa testowana w izolacji. |
+| **Akceptacyjne** | `scuola.acceptance` | Pełne procesy biznesowe (user stories) w stylu *Given / When / Then*. |
+Pokryte scenariusze akceptacyjne: rezerwacja zajęć (kontrola miejsc, reguła 24h),
+ewidencja obecności i próg nieobecności, cykl życia materiałów, notatki o postępach (US 3.4),
+raportowanie obecności, dostępność nauczyciela.
 
 ---
 
+## Uruchamianie testów
+
+Oczekiwany wynik:
+
+```
+[       168 tests successful      ]
+[         0 tests failed          ]
+```
+
+---
 ## Decyzje projektowe
 
 - **Warstwa danych** to repozytoria w pamięci (`InMemoryRepository` i pochodne) —
