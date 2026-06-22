@@ -270,9 +270,6 @@ Scuola/
 | --- | --- | --- |
 | **Jednostkowe** | `scuola.*` (lustrzane do `src`) | Każda klasa testowana w izolacji. |
 | **Akceptacyjne** | `scuola.acceptance` | Pełne procesy biznesowe (user stories) w stylu *Given / When / Then*. |
-Pokryte scenariusze akceptacyjne: rezerwacja zajęć (kontrola miejsc, reguła 24h),
-ewidencja obecności i próg nieobecności, cykl życia materiałów, notatki o postępach (US 3.4),
-raportowanie obecności, dostępność nauczyciela.
 
 ---
 
