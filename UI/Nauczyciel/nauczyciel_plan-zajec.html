@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<title>Squola - Nauczyciel - Plan zajęć</title>
+</head>
+<body>
+<aside class="sidebar">
+    <a class="logo" href="nauczyciel_index.html" aria-label="Squola - strona główna nauczyciela">
+        <div class="logo-icon">SQ</div>
+        <div class="logo-text">Squola</div>
+    </a>
+    <nav class="menu" aria-label="Menu nauczyciela">
+        <a class="" href="nauczyciel_index.html"><span>🏠</span>Start</a>
+<a class="active" href="nauczyciel_plan-zajec.html"><span>📅</span>Plan zajęć</a>
+<a class="" href="nauczyciel_aktualne-zajecia.html"><span>✅</span>Aktualne zajęcia</a>
+<a class="" href="nauczyciel_rezerwuj-terminy.html"><span>🕒</span>Zarezerwuj terminy</a>
+<a class="" href="nauczyciel_uczniowie.html"><span>👥</span>Uczniowie</a>
+    </nav>
+    <div class="sidebar-footer">
+        Profil nauczyciela<br>
+        <strong>Pitagoras</strong>
+    </div>
+</aside>
+<main class="main">
+    <section class="header">
+        <div>
+            <h1>Plan zajęć</h1>
+            <p>Tygodniowy harmonogram zajęć i wolnych terminów</p>
+        </div>
+        <div class="user">
+            <small>Zalogowano jako</small>
+            <strong>Pitagoras</strong>
+            <a href="#">Zmień profil</a>
+        </div>
+    </section>
+
+<section class="card">
+    <h2>Plan zajęć</h2>
+    <div class="filters">
+        <div class="input-group"><label for="subject">Przedmiot</label><select id="subject"><option>Matematyka</option><option>Wszystkie</option></select></div>
+        <div class="input-group"><label for="level">Poziom</label><select id="level"><option>Wszystkie poziomy</option><option>Podstawowy</option><option>Rozszerzony</option></select></div>
+        <div class="input-group"><label for="student">Uczeń</label><select id="student"><option>Wszyscy uczniowie</option><option>Jan Kowalski</option><option>Adam Nowak</option><option>Anna Nowak</option></select></div>
+    </div>
+    <div class="table-wrap">
+<table>
+    <thead>
+        <tr><th>Dzień</th><th>8:00-10:00</th><th>10:00-12:00</th><th>12:00-14:00</th><th>14:00-16:00</th><th>16:00-18:00</th><th>18:00-19:00</th></tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Poniedziałek</td>
+            <td><a class="schedule-event" href="nauczyciel_podglad-zajec.html"><strong>Matematyka</strong>p. podstawowy<br>Adam Nowak</a></td>
+            <td><a class="schedule-event" href="nauczyciel_podglad-zajec.html"><strong>Matematyka</strong>p. podstawowy<br>Jan Kowalski</a></td>
+            <td><a class="schedule-event empty" href="nauczyciel_formularz-terminu.html"><strong>Oczekuje na ucznia</strong>wolny termin</a></td>
+            <td></td><td></td><td></td>
+        </tr>
+        <tr>
+            <td>Wtorek</td>
+            <td></td>
+            <td><a class="schedule-event" href="nauczyciel_podglad-zajec.html"><strong>Matematyka</strong>p. rozszerzony<br>Anna Nowak</a></td>
+            <td><a class="schedule-event empty" href="nauczyciel_formularz-terminu.html"><strong>Oczekuje na ucznia</strong>wolny termin</a></td>
+            <td></td><td></td><td></td>
+        </tr>
+        <tr>
+            <td>Środa</td>
+            <td><a class="schedule-event empty" href="nauczyciel_formularz-terminu.html"><strong>Oczekuje na ucznia</strong>wolny termin</a></td>
+            <td><a class="schedule-event empty" href="nauczyciel_formularz-terminu.html"><strong>Oczekuje na ucznia</strong>wolny termin</a></td>
+            <td><a class="schedule-event empty" href="nauczyciel_formularz-terminu.html"><strong>Oczekuje na ucznia</strong>wolny termin</a></td>
+            <td></td><td></td><td></td>
+        </tr>
+        <tr>
+            <td>Czwartek</td>
+            <td><a class="schedule-event empty" href="nauczyciel_formularz-terminu.html"><strong>Oczekuje na ucznia</strong>wolny termin</a></td>
+            <td><a class="schedule-event empty" href="nauczyciel_formularz-terminu.html"><strong>Oczekuje na ucznia</strong>wolny termin</a></td>
+            <td></td><td></td><td></td><td></td>
+        </tr>
+        <tr>
+            <td>Piątek</td>
+            <td><a class="schedule-event empty" href="nauczyciel_formularz-terminu.html"><strong>Oczekuje na ucznia</strong>wolny termin</a></td>
+            <td><a class="schedule-event empty" href="nauczyciel_formularz-terminu.html"><strong>Oczekuje na ucznia</strong>wolny termin</a></td>
+            <td></td><td></td><td></td><td></td>
+        </tr>
+    </tbody>
+</table>
+</div>
+    <div class="action-bar"><a class="btn" href="nauczyciel_formularz-terminu.html">Dodaj termin</a><a class="btn secondary" href="nauczyciel_index.html">Wróć do panelu</a></div>
+</section>
+
+</main>
+</body>
+</html>

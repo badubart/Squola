@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<title>Squola - Udostępnione materiały</title>
+
+</head>
+<body>
+<aside class="sidebar">
+    <a class="logo" href="rodzic_index.html" aria-label="Squola - strona główna rodzica">
+        <div class="logo-icon">SQ</div>
+        <div class="logo-text">Squola</div>
+    </a>
+    <nav class="menu" aria-label="Menu rodzica">
+        <a class="" href="rodzic_index.html"><span>🏠</span>Start</a>
+<a class="" href="plan-zajec.html"><span>📅</span>Plan zajęć</a>
+<a class="" href="rezerwuj-zajecia.html"><span>🎓</span>Zarezerwuj zajęcia</a>
+<a class="active" href="materialy.html"><span>📚</span>Materiały</a>
+<a class="" href="kadra.html"><span>👨‍🏫</span>Kadra</a>
+<a class="" href="kontakt.html"><span>📞</span>Kontakt</a>
+    </nav>
+    <div class="sidebar-footer">
+        Profil rodzica/ucznia<br>
+        <strong>Edyta Kowalska</strong>
+    </div>
+</aside>
+<main class="main">
+    <section class="header">
+        <div>
+            <h1>Udostępnione materiały</h1>
+            <p>Materiały i notatki przekazane przez nauczycieli</p>
+        </div>
+        <div class="user">
+            <small>Zalogowano jako</small>
+            <strong>Edyta Kowalska</strong>
+            <a href="rodzic_index.html">Zmień profil</a>
+        </div>
+    </section>
+    
+<section class="grid">
+    <article class="card">
+        <h2>Udostępnione materiały</h2>
+        <div class="material">
+            <div>
+                <strong>Matematyka</strong>
+                <ul>
+                    <li>Notatki 12.03.2026</li>
+                    <li>Wykres funkcji sin(x)</li>
+                    <li>Zbiór zadań Matematyka 4, zakres rozszerzony, M. Kurczab, E. Kurczab, E. Świda</li>
+                </ul>
+            </div>
+            <a class="btn secondary" href="#">Pobierz paczkę</a>
+        </div>
+        <div class="material">
+            <div><strong>Język angielski</strong><br><span class="muted">Brak udostępnionych materiałów</span></div>
+            <span class="badge warning">Brak</span>
+        </div>
+    </article>
+    <aside class="card">
+        <h2>Filtr materiałów</h2>
+        <div class="input-group"><label>Przedmiot</label><select><option>Wszystkie</option><option>Matematyka</option><option>Język angielski</option></select></div>
+        <br>
+        <div class="input-group"><label>Nauczyciel</label><select><option>Wszyscy</option><option>Pitagoras</option><option>John Smith</option></select></div>
+        <div class="action-bar"><a class="btn" href="#">Filtruj</a><a class="btn secondary" href="#">Wyczyść</a></div>
+    </aside>
+</section>
+
+</main>
+</body>
+</html>

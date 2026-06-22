@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<title>Squola - Nauczyciel - Uczniowie</title>
+</head>
+<body>
+<aside class="sidebar">
+    <a class="logo" href="nauczyciel_index.html" aria-label="Squola - strona główna nauczyciela">
+        <div class="logo-icon">SQ</div>
+        <div class="logo-text">Squola</div>
+    </a>
+    <nav class="menu" aria-label="Menu nauczyciela">
+        <a class="" href="nauczyciel_index.html"><span>🏠</span>Start</a>
+<a class="" href="nauczyciel_plan-zajec.html"><span>📅</span>Plan zajęć</a>
+<a class="" href="nauczyciel_aktualne-zajecia.html"><span>✅</span>Aktualne zajęcia</a>
+<a class="" href="nauczyciel_rezerwuj-terminy.html"><span>🕒</span>Zarezerwuj terminy</a>
+<a class="active" href="nauczyciel_uczniowie.html"><span>👥</span>Uczniowie</a>
+    </nav>
+    <div class="sidebar-footer">
+        Profil nauczyciela<br>
+        <strong>Pitagoras</strong>
+    </div>
+</aside>
+<main class="main">
+    <section class="header">
+        <div>
+            <h1>Uczniowie</h1>
+            <p>Zarządzaj uczniami i przejdź do szczegółów zajęć</p>
+        </div>
+        <div class="user">
+            <small>Zalogowano jako</small>
+            <strong>Pitagoras</strong>
+            <a href="#">Zmień profil</a>
+        </div>
+    </section>
+
+<section class="grid">
+    <article class="card">
+        <h2>Zarządzaj uczniami</h2>
+        <div class="filters">
+            <div class="input-group"><label for="day">Dzień</label><select id="day"><option>Wszystkie</option><option>Poniedziałek</option><option>Wtorek</option><option>Środa</option><option>Czwartek</option><option>Piątek</option></select></div>
+            <div class="input-group"><label for="subject">Przedmiot</label><select id="subject"><option>Matematyka</option><option>Wszystkie</option></select></div>
+            <div class="input-group"><label for="level">Poziom</label><select id="level"><option>Wszystkie</option><option>Podstawowy</option><option>Rozszerzony</option></select></div>
+        </div>
+        <article class="student-card">
+            <div>
+                <h3>Jan Kowalski</h3>
+                <div class="student-meta"><span><strong>Przedmiot:</strong> Matematyka</span><span><strong>Termin:</strong> Poniedziałek 12:00</span><span><strong>Poziom:</strong> Podstawowy</span><span><strong>Sala:</strong> 3</span></div>
+            </div>
+            <a class="btn secondary" href="nauczyciel_podglad-zajec.html">Szczegóły</a>
+        </article>
+        <article class="student-card">
+            <div>
+                <h3>Jaś Nowak</h3>
+                <div class="student-meta"><span><strong>Przedmiot:</strong> Matematyka</span><span><strong>Termin:</strong> Poniedziałek 13:30</span><span><strong>Poziom:</strong> Rozszerzony</span><span><strong>Sala:</strong> 3</span></div>
+            </div>
+            <a class="btn secondary" href="nauczyciel_podglad-zajec.html">Szczegóły</a>
+        </article>
+    </article>
+    <aside class="card">
+        <h2>Filtr</h2>
+        <div class="kpi-list">
+            <div class="kpi"><span>Poniedziałek</span><strong>2 uczniów</strong></div>
+            <div class="kpi"><span>Wtorek</span><strong>1 uczeń</strong></div>
+            <div class="kpi"><span>Środa</span><strong>1 uczeń</strong></div>
+            <div class="kpi"><span>Nieobecności</span><strong>0</strong></div>
+        </div>
+    </aside>
+</section>
+
+</main>
+</body>
+</html>

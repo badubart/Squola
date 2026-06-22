@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<title>Squola - Rezerwacja zajęć</title>
+</head>
+<body>
+<aside class="sidebar">
+    <a class="logo" href="admin_index.html" aria-label="Squola - strona główna administratora">
+        <div class="logo-icon">SQ</div>
+        <div class="logo-text">Squola</div>
+    </a>
+    <nav class="menu" aria-label="Menu administratora">
+        <a class="" href="admin_index.html"><span>🏠</span>Start</a>
+<a class="" href="admin_plan-zajec.html"><span>📅</span>Plan zajęć</a>
+<a class="" href="admin_modyfikuj-terminy.html"><span>🛠️</span>Modyfikuj terminy</a>
+<a class="" href="admin_zarzadzaj-kadra.html"><span>👨‍🏫</span>Zarządzaj kadrą</a>
+<a class="active" href="admin_rezerwacja-zajec.html"><span>📝</span>Rezerwacja zajęć</a>
+<a class="" href="admin_kontakt.html"><span>📞</span>Kontakt</a>
+    </nav>
+    <div class="sidebar-footer">
+        Profil administratora<br>
+        <strong>Maria Lewandowska</strong>
+    </div>
+</aside>
+<main class="main">
+    <section class="header">
+        <div>
+            <h1>Profil Administratora</h1>
+            <p>Dodaj lub uzupełnij rezerwację dla klienta</p>
+        </div>
+        <div class="user">
+            <small>Zalogowano jako</small>
+            <strong>Maria Lewandowska</strong>
+            <a href="#">Zmień profil</a>
+        </div>
+    </section>
+
+
+<section class="grid-even">
+    <article class="card">
+        <h2>Rezerwacja zajęć</h2>
+        <form>
+            <div class="form-grid">
+                <div class="input-group"><label>Przedmiot</label><select><option>Wybierz przedmiot</option><option selected>Matematyka</option><option>Język Angielski</option></select></div>
+                <div class="input-group"><label>Etap edukacji</label><select><option>Wybierz etap</option><option selected>Liceum</option><option>Szkoła podstawowa</option></select></div>
+                <div class="input-group"><label>Podaj imię ucznia</label><input value="Jan" placeholder="Wpisz imię..."></div>
+                <div class="input-group"><label>Podaj nazwisko ucznia</label><input value="Kowalski" placeholder="Wpisz nazwisko..."></div>
+                <div class="input-group"><label>Podaj numer telefonu</label><input value="111 222 333" placeholder="Wpisz numer telefonu..."></div>
+                <div class="input-group"><label>Klasa</label><select><option>Wybierz klasę</option><option selected>IV</option></select></div>
+                <div class="input-group"><label>Poziom</label><select><option>Wybierz poziom</option><option selected>Rozszerzony</option><option>Podstawowy</option></select></div>
+                <div class="input-group"><label>Sposób płatności</label><select><option>Wybierz sposób płatności</option><option selected>Na miejscu</option><option>Przelew</option></select></div>
+                <div class="input-group full"><label>Dodatkowe informacje do prowadzącego</label><textarea>Brak</textarea></div>
+            </div>
+            <div class="action-bar">
+                <a class="btn secondary" href="admin_index.html">Wróć</a>
+                <a class="btn" href="admin_potwierdz-rezerwacje.html">Zatwierdź</a>
+            </div>
+        </form>
+    </article>
+    <aside class="card">
+        <h2>Podsumowanie</h2>
+        <div class="kpi-list">
+            <div class="kpi"><span>Cena zajęć</span><strong>70 zł</strong></div>
+            <div class="kpi"><span>Okres</span><strong>11.03.2026 - 10.06.2026</strong></div>
+            <div class="kpi"><span>Nauczyciel</span><strong>Pitagoras</strong></div>
+        </div>
+    </aside>
+</section>
+
+
+</main>
+</body>
+</html>

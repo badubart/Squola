@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<title>Squola - Plan nauczyciela</title>
+</head>
+<body>
+<aside class="sidebar">
+    <a class="logo" href="admin_index.html" aria-label="Squola - strona główna administratora">
+        <div class="logo-icon">SQ</div>
+        <div class="logo-text">Squola</div>
+    </a>
+    <nav class="menu" aria-label="Menu administratora">
+        <a class="" href="admin_index.html"><span>🏠</span>Start</a>
+<a class="" href="admin_plan-zajec.html"><span>📅</span>Plan zajęć</a>
+<a class="" href="admin_modyfikuj-terminy.html"><span>🛠️</span>Modyfikuj terminy</a>
+<a class="active" href="admin_zarzadzaj-kadra.html"><span>👨‍🏫</span>Zarządzaj kadrą</a>
+<a class="" href="admin_rezerwacja-zajec.html"><span>📝</span>Rezerwacja zajęć</a>
+<a class="" href="admin_kontakt.html"><span>📞</span>Kontakt</a>
+    </nav>
+    <div class="sidebar-footer">
+        Profil administratora<br>
+        <strong>Maria Lewandowska</strong>
+    </div>
+</aside>
+<main class="main">
+    <section class="header">
+        <div>
+            <h1>Profil Administratora</h1>
+            <p>Podgląd tygodniowego planu nauczyciela</p>
+        </div>
+        <div class="user">
+            <small>Zalogowano jako</small>
+            <strong>Maria Lewandowska</strong>
+            <a href="#">Zmień profil</a>
+        </div>
+    </section>
+
+
+<section class="card">
+    <h2>Jan Kowalski — plan zajęć</h2>
+    <div class="table-wrap">
+        <table>
+            <thead><tr><th>Godzina</th><th>Poniedziałek</th><th>Wtorek</th><th>Środa</th><th>Czwartek</th><th>Piątek</th></tr></thead>
+            <tbody>
+                <tr><td>8:00-10:00</td><td></td><td><span class="schedule-event"><strong>Matematyka</strong>Adam Nowak<br>Sala 2</span></td><td></td><td></td><td></td></tr>
+                <tr><td>10:00-12:00</td><td><span class="schedule-event"><strong>Matematyka</strong>Jan Kowalski<br>Sala 3</span></td><td></td><td></td><td><span class="schedule-event empty">Wolny termin</span></td><td></td></tr>
+                <tr><td>12:00-14:00</td><td></td><td></td><td><span class="schedule-event empty">Wolny termin</span></td><td></td><td></td></tr>
+                <tr><td>14:00-16:00</td><td></td><td></td><td></td><td></td><td></td></tr>
+                <tr><td>16:00-18:00</td><td></td><td></td><td></td><td></td><td></td></tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="action-bar"><a class="btn secondary" href="admin_szczegoly-nauczyciela.html">Wróć do szczegółów</a></div>
+</section>
+
+
+</main>
+</body>
+</html>

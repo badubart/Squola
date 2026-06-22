@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<title>Squola - Rezerwacja zajęć</title>
+
+</head>
+<body>
+<aside class="sidebar">
+    <a class="logo" href="rodzic_index.html" aria-label="Squola - strona główna rodzica">
+        <div class="logo-icon">SQ</div>
+        <div class="logo-text">Squola</div>
+    </a>
+    <nav class="menu" aria-label="Menu rodzica">
+        <a class="" href="rodzic_index.html"><span>🏠</span>Start</a>
+<a class="" href="plan-zajec.html"><span>📅</span>Plan zajęć</a>
+<a class="active" href="rezerwuj-zajecia.html"><span>🎓</span>Zarezerwuj zajęcia</a>
+<a class="" href="materialy.html"><span>📚</span>Materiały</a>
+<a class="" href="kadra.html"><span>👨‍🏫</span>Kadra</a>
+<a class="" href="kontakt.html"><span>📞</span>Kontakt</a>
+    </nav>
+    <div class="sidebar-footer">
+        Profil rodzica/ucznia<br>
+        <strong>Edyta Kowalska</strong>
+    </div>
+</aside>
+<main class="main">
+    <section class="header">
+        <div>
+            <h1>Rezerwacja zajęć</h1>
+            <p>Uzupełnij dane ucznia i szczegóły rezerwacji</p>
+        </div>
+        <div class="user">
+            <small>Zalogowano jako</small>
+            <strong>Edyta Kowalska</strong>
+            <a href="rodzic_index.html">Zmień profil</a>
+        </div>
+    </section>
+    
+<section class="card" style="max-width:900px;">
+    <h2>Rezerwacja zajęć</h2>
+    <form action="potwierdz-rezerwacje.html">
+        <div class="form-grid">
+            <div class="input-group"><label>Przedmiot</label><input value="Matematyka" readonly></div>
+            <div class="input-group"><label>Termin</label><input value="Poniedziałek 10:00-12:00" readonly></div>
+            <div class="input-group"><label>Podaj imię ucznia</label><input placeholder="Wpisz imię..." value="Jan"></div>
+            <div class="input-group"><label>Podaj nazwisko ucznia</label><input placeholder="Wpisz nazwisko..." value="Kowalski"></div>
+            <div class="input-group"><label>Podaj numer telefonu</label><input placeholder="Wpisz numer telefonu..." value="222 333 444"></div>
+            <div class="input-group"><label>Etap edukacji</label><select><option>Liceum</option><option>Szkoła podstawowa</option><option>Technikum</option></select></div>
+            <div class="input-group"><label>Klasa</label><select><option>Klasa IV</option><option>Klasa III</option><option>Klasa II</option><option>Klasa I</option></select></div>
+            <div class="input-group"><label>Poziom</label><select><option>Poziom rozszerzony</option><option>Poziom podstawowy</option></select></div>
+            <div class="input-group"><label>Okres rezerwacji</label><select><option>11.03.2026 - 10.06.2026</option><option>1 miesiąc</option><option>Jednorazowo</option></select></div>
+            <div class="input-group"><label>Sposób płatności</label><select><option>Zapłać teraz</option><option>Zapłać później</option><option>Na miejscu</option></select></div>
+            <div class="input-group full"><label>Dodatkowe informacje do prowadzącego</label><textarea>Nauczyciel powinien skupić się na zadaniach z trygonometrii</textarea></div>
+        </div>
+        <div class="price-box"><span>Cena zajęć wynosi</span><strong>70 zł</strong></div>
+        <div class="action-bar">
+            <button class="btn" type="submit">Zatwierdź</button>
+            <a class="btn secondary" href="rezerwuj-zajecia.html">Wróć</a>
+        </div>
+    </form>
+</section>
+
+</main>
+</body>
+</html>

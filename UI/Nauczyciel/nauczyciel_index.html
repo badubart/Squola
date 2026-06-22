@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<title>Squola - Profil Nauczyciela</title>
+</head>
+<body>
+<aside class="sidebar">
+    <a class="logo" href="nauczyciel_index.html" aria-label="Squola - strona główna nauczyciela">
+        <div class="logo-icon">SQ</div>
+        <div class="logo-text">Squola</div>
+    </a>
+    <nav class="menu" aria-label="Menu nauczyciela">
+        <a class="active" href="nauczyciel_index.html"><span>🏠</span>Start</a>
+<a class="" href="nauczyciel_plan-zajec.html"><span>📅</span>Plan zajęć</a>
+<a class="" href="nauczyciel_aktualne-zajecia.html"><span>✅</span>Aktualne zajęcia</a>
+<a class="" href="nauczyciel_rezerwuj-terminy.html"><span>🕒</span>Zarezerwuj terminy</a>
+<a class="" href="nauczyciel_uczniowie.html"><span>👥</span>Uczniowie</a>
+    </nav>
+    <div class="sidebar-footer">
+        Profil nauczyciela<br>
+        <strong>Pitagoras</strong>
+    </div>
+</aside>
+<main class="main">
+    <section class="header">
+        <div>
+            <h1>Profil Nauczyciela</h1>
+            <p>Zarządzaj zajęciami, uczniami i wolnymi terminami</p>
+        </div>
+        <div class="user">
+            <small>Zalogowano jako</small>
+            <strong>Pitagoras</strong>
+            <a href="#">Zmień profil</a>
+        </div>
+    </section>
+
+<section class="grid">
+    <article class="card">
+        <h2>Zbliżające się zajęcia</h2>
+        <a class="lesson" href="nauczyciel_aktualne-zajecia.html">
+            <div><div class="lesson-title">Matematyka</div><span class="muted">Poniedziałek, 12:00 · Jan Kowalski · sala 3</span></div>
+            <span class="badge success">Rozpocznij</span>
+        </a>
+        <a class="lesson" href="nauczyciel_podglad-zajec.html">
+            <div><div class="lesson-title">Matematyka</div><span class="muted">Poniedziałek, 13:30 · Jaś Strzałka · sala 3</span></div>
+            <span class="badge">Podgląd</span>
+        </a>
+        <div class="action-bar">
+            <a class="btn" href="nauczyciel_plan-zajec.html">Przeglądaj plan</a>
+            <a class="btn secondary" href="nauczyciel_rezerwuj-terminy.html">Dodaj wolny termin</a>
+        </div>
+    </article>
+    <aside class="card">
+        <h2>Szybkie akcje</h2>
+        <div class="kpi-list">
+            <a class="lesson" href="nauczyciel_aktualne-zajecia.html"><div><strong>Aktualne zajęcia</strong><br><span class="muted">Obecność, notatki, materiały</span></div><span>→</span></a>
+            <a class="lesson" href="nauczyciel_uczniowie.html"><div><strong>Uczniowie</strong><br><span class="muted">Lista i szczegóły uczniów</span></div><span>→</span></a>
+            <a class="lesson" href="nauczyciel_formularz-terminu.html"><div><strong>Rezerwacja terminu</strong><br><span class="muted">Przedmiot, poziom, liczba uczniów</span></div><span>→</span></a>
+        </div>
+    </aside>
+</section>
+<section class="card" style="margin-top:24px;">
+    <h2>Profil prowadzącego</h2>
+    <p class="muted" style="line-height:1.7;max-width:900px;">Widok nauczyciela pozwala sprawdzić plan zajęć, obsłużyć trwającą lekcję, oznaczyć obecność, dopisać notatki, dodać materiały i udostępnić wolne terminy rodzicom.</p>
+</section>
+
+</main>
+</body>
+</html>

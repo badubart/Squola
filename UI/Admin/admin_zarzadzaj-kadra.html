@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<title>Squola - Zarządzaj kadrą</title>
+</head>
+<body>
+<aside class="sidebar">
+    <a class="logo" href="admin_index.html" aria-label="Squola - strona główna administratora">
+        <div class="logo-icon">SQ</div>
+        <div class="logo-text">Squola</div>
+    </a>
+    <nav class="menu" aria-label="Menu administratora">
+        <a class="" href="admin_index.html"><span>🏠</span>Start</a>
+<a class="" href="admin_plan-zajec.html"><span>📅</span>Plan zajęć</a>
+<a class="" href="admin_modyfikuj-terminy.html"><span>🛠️</span>Modyfikuj terminy</a>
+<a class="active" href="admin_zarzadzaj-kadra.html"><span>👨‍🏫</span>Zarządzaj kadrą</a>
+<a class="" href="admin_rezerwacja-zajec.html"><span>📝</span>Rezerwacja zajęć</a>
+<a class="" href="admin_kontakt.html"><span>📞</span>Kontakt</a>
+    </nav>
+    <div class="sidebar-footer">
+        Profil administratora<br>
+        <strong>Maria Lewandowska</strong>
+    </div>
+</aside>
+<main class="main">
+    <section class="header">
+        <div>
+            <h1>Profil Administratora</h1>
+            <p>Przeglądaj nauczycieli, pracowników i klientów</p>
+        </div>
+        <div class="user">
+            <small>Zalogowano jako</small>
+            <strong>Maria Lewandowska</strong>
+            <a href="#">Zmień profil</a>
+        </div>
+    </section>
+
+
+<section class="card">
+    <h2>Zarządzaj kadrą</h2>
+    <div class="group-tabs">
+        <a class="active" href="#">Nauczyciele</a>
+        <a href="#">Klienci</a>
+        <a href="#">Pracownicy</a>
+    </div>
+    <div class="filters">
+        <div class="input-group"><label>Wybierz grupę</label><select><option>Nauczyciele</option><option>Klienci</option><option>Pracownicy</option></select></div>
+        <div class="input-group"><label>Przedmiot</label><select><option>Matematyka</option><option>Język Angielski</option><option>Wszystkie</option></select></div>
+        <div class="input-group"><label>Szukaj</label><input placeholder="Imię lub nazwisko"></div>
+    </div>
+    <div class="staff-list">
+        <div class="staff-card">
+            <div class="staff-main">
+                <div class="avatar">JK</div>
+                <div>
+                    <h3>Jan Kowalski</h3>
+                    <div class="staff-meta"><span>Rola: <strong>Nauczyciel</strong></span><span>Przedmiot: <strong>Matematyka</strong></span><span>Poziom: <strong>Podstawowy i rozszerzony</strong></span><span>Status: <strong>Aktywny</strong></span></div>
+                </div>
+            </div>
+            <a class="btn secondary" href="admin_szczegoly-nauczyciela.html">Szczegóły</a>
+        </div>
+        <div class="staff-card">
+            <div class="staff-main">
+                <div class="avatar">AR</div>
+                <div>
+                    <h3>Arystoteles</h3>
+                    <div class="staff-meta"><span>Rola: <strong>Nauczyciel</strong></span><span>Przedmiot: <strong>Matematyka</strong></span><span>Poziom: <strong>Podstawowy</strong></span><span>Status: <strong>Aktywny</strong></span></div>
+                </div>
+            </div>
+            <a class="btn secondary" href="admin_szczegoly-nauczyciela.html">Szczegóły</a>
+        </div>
+        <div class="staff-card">
+            <div class="staff-main">
+                <div class="avatar">JS</div>
+                <div>
+                    <h3>John Smith</h3>
+                    <div class="staff-meta"><span>Rola: <strong>Nauczyciel</strong></span><span>Przedmiot: <strong>Język Angielski</strong></span><span>Poziom: <strong>Dowolny</strong></span><span>Status: <strong>Aktywny</strong></span></div>
+                </div>
+            </div>
+            <a class="btn secondary" href="admin_szczegoly-nauczyciela.html">Szczegóły</a>
+        </div>
+    </div>
+</section>
+
+
+</main>
+</body>
+</html>

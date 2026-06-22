@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<title>Squola - Plan zajęć</title>
+
+</head>
+<body>
+<aside class="sidebar">
+    <a class="logo" href="rodzic_index.html" aria-label="Squola - strona główna rodzica">
+        <div class="logo-icon">SQ</div>
+        <div class="logo-text">Squola</div>
+    </a>
+    <nav class="menu" aria-label="Menu rodzica">
+        <a class="" href="rodzic_index.html"><span>🏠</span>Start</a>
+<a class="active" href="plan-zajec.html"><span>📅</span>Plan zajęć</a>
+<a class="" href="rezerwuj-zajecia.html"><span>🎓</span>Zarezerwuj zajęcia</a>
+<a class="" href="materialy.html"><span>📚</span>Materiały</a>
+<a class="" href="kadra.html"><span>👨‍🏫</span>Kadra</a>
+<a class="" href="kontakt.html"><span>📞</span>Kontakt</a>
+    </nav>
+    <div class="sidebar-footer">
+        Profil rodzica/ucznia<br>
+        <strong>Edyta Kowalska</strong>
+    </div>
+</aside>
+<main class="main">
+    <section class="header">
+        <div>
+            <h1>Plan zajęć</h1>
+            <p>Sprawdź zaplanowane lekcje i przejdź do szczegółów zajęć</p>
+        </div>
+        <div class="user">
+            <small>Zalogowano jako</small>
+            <strong>Edyta Kowalska</strong>
+            <a href="rodzic_index.html">Zmień profil</a>
+        </div>
+    </section>
+    
+<div class="page-actions">
+    <a class="btn" href="rezerwuj-zajecia.html">+ Zarezerwuj zajęcia</a>
+    <a class="btn secondary" href="#">Eksportuj plan</a>
+</div>
+<section class="card">
+    <h2>Plan zajęć</h2>
+    <div class="filters" aria-label="Filtrowanie planu">
+        <div class="input-group"><label for="teacher">Nauczyciel</label><select id="teacher"><option>Wszyscy nauczyciele</option><option>Pitagoras</option><option>John Smith</option></select></div>
+        <div class="input-group"><label for="subject">Przedmiot</label><select id="subject"><option>Wszystkie przedmioty</option><option>Matematyka</option><option>Język angielski</option><option>Język polski</option><option>Chemia</option><option>Fizyka</option></select></div>
+        <div class="input-group"><label for="level">Poziom</label><select id="level"><option>Dowolny</option><option>Podstawowy</option><option>Rozszerzony</option></select></div>
+        <div class="input-group"><label for="price">Cena</label><select id="price"><option>Dowolna</option><option>do 70 zł</option><option>70-100 zł</option></select></div>
+    </div>
+    <div class="table-wrap">
+        <table aria-label="Tygodniowy plan zajęć">
+            <thead><tr><th>Dzień</th><th>8:00-9:00</th><th>9:00-10:00</th><th>10:00-11:00</th><th>11:00-12:00</th><th>12:00-13:00</th><th>13:00-14:00</th><th>14:00-15:00</th><th>15:00-16:00</th><th>16:00-17:00</th><th>17:00-18:00</th><th>18:00-19:00</th></tr></thead>
+            <tbody>
+                <tr><td>Poniedziałek</td><td></td><td></td><td colspan="2"><a class="schedule-event" href="podglad-zajec.html"><strong>Matematyka</strong>10:00-12:00<br>Pitagoras</a></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+                <tr><td>Wtorek</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+                <tr><td>Środa</td><td></td><td></td><td></td><td></td><td colspan="2"><a class="schedule-event" href="podglad-zajec.html"><strong>Język angielski</strong>12:00-14:00<br>John Smith</a></td><td></td><td></td><td></td><td></td><td></td></tr>
+                <tr><td>Czwartek</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+                <tr><td>Piątek</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+            </tbody>
+        </table>
+    </div>
+</section>
+
+</main>
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<title>Squola - Zarezerwuj zajęcia</title>
+
+</head>
+<body>
+<aside class="sidebar">
+    <a class="logo" href="rodzic_index.html" aria-label="Squola - strona główna rodzica">
+        <div class="logo-icon">SQ</div>
+        <div class="logo-text">Squola</div>
+    </a>
+    <nav class="menu" aria-label="Menu rodzica">
+        <a class="" href="rodzic_index.html"><span>🏠</span>Start</a>
+<a class="" href="plan-zajec.html"><span>📅</span>Plan zajęć</a>
+<a class="active" href="rezerwuj-zajecia.html"><span>🎓</span>Zarezerwuj zajęcia</a>
+<a class="" href="materialy.html"><span>📚</span>Materiały</a>
+<a class="" href="kadra.html"><span>👨‍🏫</span>Kadra</a>
+<a class="" href="kontakt.html"><span>📞</span>Kontakt</a>
+    </nav>
+    <div class="sidebar-footer">
+        Profil rodzica/ucznia<br>
+        <strong>Edyta Kowalska</strong>
+    </div>
+</aside>
+<main class="main">
+    <section class="header">
+        <div>
+            <h1>Zarezerwuj zajęcia</h1>
+            <p>Wybierz dostępny termin i nauczyciela</p>
+        </div>
+        <div class="user">
+            <small>Zalogowano jako</small>
+            <strong>Edyta Kowalska</strong>
+            <a href="rodzic_index.html">Zmień profil</a>
+        </div>
+    </section>
+    
+<section class="card">
+    <h2>Zarezerwuj zajęcia</h2>
+    <div class="filters">
+        <div class="input-group"><label for="subject">Wybierz przedmiot</label><select id="subject"><option>Matematyka</option><option>Język angielski</option><option>Język polski</option><option>Chemia</option><option>Fizyka</option></select></div>
+        <div class="input-group"><label for="level">Wybierz poziom</label><select id="level"><option>Dowolny</option><option>Podstawowy</option><option>Rozszerzony</option></select></div>
+        <div class="input-group"><label for="stage">Etap edukacji</label><select id="stage"><option>Dowolny</option><option>Szkoła podstawowa</option><option>Liceum/Technikum</option></select></div>
+    </div>
+    <div class="grid-even">
+        <article class="slot">
+            <div><strong>Matematyka · 10:00-12:00</strong><br><span class="muted">Poniedziałek · poziom podstawowy i rozszerzony</span><br><span class="badge">Pitagoras</span></div>
+            <a class="btn" href="formularz-rezerwacji.html">Rezerwuj</a>
+        </article>
+        <article class="slot">
+            <div><strong>Matematyka · 12:00-14:00</strong><br><span class="muted">Środa · szkoła podstawowa</span><br><span class="badge">Ryszard Ryś</span></div>
+            <a class="btn" href="formularz-rezerwacji.html">Rezerwuj</a>
+        </article>
+        <article class="slot">
+            <div><strong>Język angielski · 14:00-16:00</strong><br><span class="muted">Czwartek · poziom podstawowy</span><br><span class="badge">John Smith</span></div>
+            <a class="btn" href="formularz-rezerwacji.html">Rezerwuj</a>
+        </article>
+        <article class="slot">
+            <div><strong>Fizyka · 16:00-18:00</strong><br><span class="muted">Piątek · liceum</span><br><span class="badge warning">2 wolne miejsca</span></div>
+            <a class="btn" href="formularz-rezerwacji.html">Rezerwuj</a>
+        </article>
+    </div>
+</section>
+
+</main>
+</body>
+</html>

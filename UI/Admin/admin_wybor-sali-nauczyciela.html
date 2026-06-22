@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<title>Squola - Wybór sali i nauczyciela</title>
+</head>
+<body>
+<aside class="sidebar">
+    <a class="logo" href="admin_index.html" aria-label="Squola - strona główna administratora">
+        <div class="logo-icon">SQ</div>
+        <div class="logo-text">Squola</div>
+    </a>
+    <nav class="menu" aria-label="Menu administratora">
+        <a class="" href="admin_index.html"><span>🏠</span>Start</a>
+<a class="" href="admin_plan-zajec.html"><span>📅</span>Plan zajęć</a>
+<a class="active" href="admin_modyfikuj-terminy.html"><span>🛠️</span>Modyfikuj terminy</a>
+<a class="" href="admin_zarzadzaj-kadra.html"><span>👨‍🏫</span>Zarządzaj kadrą</a>
+<a class="" href="admin_rezerwacja-zajec.html"><span>📝</span>Rezerwacja zajęć</a>
+<a class="" href="admin_kontakt.html"><span>📞</span>Kontakt</a>
+    </nav>
+    <div class="sidebar-footer">
+        Profil administratora<br>
+        <strong>Maria Lewandowska</strong>
+    </div>
+</aside>
+<main class="main">
+    <section class="header">
+        <div>
+            <h1>Profil Administratora</h1>
+            <p>Uzupełnij dane terminu</p>
+        </div>
+        <div class="user">
+            <small>Zalogowano jako</small>
+            <strong>Maria Lewandowska</strong>
+            <a href="#">Zmień profil</a>
+        </div>
+    </section>
+
+
+<section class="grid-even">
+    <article class="card">
+        <h2>Wybór sali i nauczyciela</h2>
+        <div class="notice">Wybrany termin: <strong>Poniedziałek, 12:00-14:00</strong></div>
+        <form>
+            <div class="form-grid">
+                <div class="input-group"><label>Wybierz nauczyciela</label><select><option>Wybierz nauczyciela</option><option>Pitagoras</option><option>John Smith</option><option>Ryszard Ryś</option></select></div>
+                <div class="input-group"><label>Wybierz salę</label><select><option>Wybierz salę</option><option>Sala 2</option><option>Sala 3</option><option>Sala 5</option></select></div>
+                <div class="input-group full"><label>Dodatkowe informacje</label><textarea placeholder="Wpisz dodatkowe informacje...">Brak</textarea></div>
+            </div>
+            <div class="action-bar">
+                <a class="btn secondary" href="admin_modyfikuj-terminy.html">Wróć</a>
+                <a class="btn" href="admin_potwierdz-sala-nauczyciel.html">Zatwierdź</a>
+            </div>
+        </form>
+    </article>
+    <aside class="card">
+        <h2>Dostępność</h2>
+        <div class="kpi-list">
+            <div class="kpi"><span>Dostępni nauczyciele</span><strong>2</strong></div>
+            <div class="kpi"><span>Dostępne sale</span><strong>2</strong></div>
+            <div class="kpi"><span>Godzina</span><strong>12:00-14:00</strong></div>
+        </div>
+    </aside>
+</section>
+
+
+</main>
+</body>
+</html>

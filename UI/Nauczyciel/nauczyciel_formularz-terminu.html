@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<title>Squola - Nauczyciel - Rezerwacja terminu</title>
+</head>
+<body>
+<aside class="sidebar">
+    <a class="logo" href="nauczyciel_index.html" aria-label="Squola - strona główna nauczyciela">
+        <div class="logo-icon">SQ</div>
+        <div class="logo-text">Squola</div>
+    </a>
+    <nav class="menu" aria-label="Menu nauczyciela">
+        <a class="" href="nauczyciel_index.html"><span>🏠</span>Start</a>
+<a class="" href="nauczyciel_plan-zajec.html"><span>📅</span>Plan zajęć</a>
+<a class="" href="nauczyciel_aktualne-zajecia.html"><span>✅</span>Aktualne zajęcia</a>
+<a class="active" href="nauczyciel_rezerwuj-terminy.html"><span>🕒</span>Zarezerwuj terminy</a>
+<a class="" href="nauczyciel_uczniowie.html"><span>👥</span>Uczniowie</a>
+    </nav>
+    <div class="sidebar-footer">
+        Profil nauczyciela<br>
+        <strong>Pitagoras</strong>
+    </div>
+</aside>
+<main class="main">
+    <section class="header">
+        <div>
+            <h1>Rezerwacja terminu</h1>
+            <p>Uzupełnij dane terminu udostępnianego rodzicom</p>
+        </div>
+        <div class="user">
+            <small>Zalogowano jako</small>
+            <strong>Pitagoras</strong>
+            <a href="#">Zmień profil</a>
+        </div>
+    </section>
+
+<section class="card" style="max-width:760px;">
+    <h2>Rezerwacja terminu</h2>
+    <div class="form-grid">
+        <div class="input-group"><label for="subject">Wybierz przedmiot</label><select id="subject"><option>Matematyka</option><option>Fizyka</option><option>Chemia</option></select></div>
+        <div class="input-group"><label for="stage">Wybierz etap edukacji</label><select id="stage"><option>Liceum/Technikum</option><option>Szkoła podstawowa</option></select></div>
+        <div class="input-group"><label for="class">Wybierz klasę</label><select id="class"><option>I-V</option><option>IV</option><option>VIII</option></select></div>
+        <div class="input-group"><label for="level">Wybierz poziom</label><select id="level"><option>Rozszerzony / Podstawowy</option><option>Podstawowy</option><option>Rozszerzony</option></select></div>
+        <div class="input-group"><label for="students">Maksymalna liczba uczniów</label><select id="students"><option>3</option><option>1</option><option>2</option><option>4</option></select></div>
+        <div class="input-group"><label for="hour">Godzina</label><input id="hour" value="12:00-14:00"></div>
+        <div class="input-group full"><label for="notes">Dodatkowe informacje</label><textarea id="notes">Brak</textarea></div>
+    </div>
+    <div class="action-bar"><a class="btn secondary" href="nauczyciel_rezerwuj-terminy.html">Wróć</a><a class="btn" href="nauczyciel_potwierdz-termin.html">Zatwierdź</a></div>
+</section>
+
+</main>
+</body>
+</html>

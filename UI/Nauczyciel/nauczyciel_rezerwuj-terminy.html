@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<title>Squola - Nauczyciel - Rezerwuj terminy</title>
+</head>
+<body>
+<aside class="sidebar">
+    <a class="logo" href="nauczyciel_index.html" aria-label="Squola - strona główna nauczyciela">
+        <div class="logo-icon">SQ</div>
+        <div class="logo-text">Squola</div>
+    </a>
+    <nav class="menu" aria-label="Menu nauczyciela">
+        <a class="" href="nauczyciel_index.html"><span>🏠</span>Start</a>
+<a class="" href="nauczyciel_plan-zajec.html"><span>📅</span>Plan zajęć</a>
+<a class="" href="nauczyciel_aktualne-zajecia.html"><span>✅</span>Aktualne zajęcia</a>
+<a class="active" href="nauczyciel_rezerwuj-terminy.html"><span>🕒</span>Zarezerwuj terminy</a>
+<a class="" href="nauczyciel_uczniowie.html"><span>👥</span>Uczniowie</a>
+    </nav>
+    <div class="sidebar-footer">
+        Profil nauczyciela<br>
+        <strong>Pitagoras</strong>
+    </div>
+</aside>
+<main class="main">
+    <section class="header">
+        <div>
+            <h1>Zarezerwuj terminy</h1>
+            <p>Oznacz godziny, w których rodzice mogą rezerwować zajęcia</p>
+        </div>
+        <div class="user">
+            <small>Zalogowano jako</small>
+            <strong>Pitagoras</strong>
+            <a href="#">Zmień profil</a>
+        </div>
+    </section>
+
+<section class="card">
+    <h2>Modyfikuj terminy</h2>
+    <p class="admin-note">Kliknij wolne pole, aby utworzyć termin dostępny dla rodziców.</p>
+    <div class="filters">
+        <div class="input-group"><label for="subject">Przedmiot</label><select id="subject"><option>Matematyka</option><option>Fizyka</option><option>Chemia</option></select></div>
+        <div class="input-group"><label for="room">Sala</label><select id="room"><option>Wybierz salę</option><option>Sala 2</option><option>Sala 3</option><option>Sala 5</option></select></div>
+        <div class="input-group"><label for="level">Poziom</label><select id="level"><option>Dowolny</option><option>Podstawowy</option><option>Rozszerzony</option></select></div>
+    </div>
+    <div class="room-grid">
+        <div class="head">Godzina</div><div class="head">Poniedziałek</div><div class="head">Wtorek</div><div class="head">Środa</div><div class="head">Czwartek</div><div class="head">Piątek</div>
+        <div class="time">8:00-10:00</div><a class="admin-slot free" href="nauczyciel_formularz-terminu.html" aria-label="Otwórz rezerwację terminu 8:00-10:00 w poniedziałek">Dostępne sale: 5</a><a class="admin-slot free" href="nauczyciel_formularz-terminu.html" aria-label="Otwórz rezerwację terminu 8:00-10:00 we wtorek">Dostępne sale: 5</a><a class="admin-slot free" href="nauczyciel_formularz-terminu.html" aria-label="Otwórz rezerwację terminu 8:00-10:00 w środę">Dostępne sale: 5</a><a class="admin-slot free" href="nauczyciel_formularz-terminu.html" aria-label="Otwórz rezerwację terminu 8:00-10:00 w czwartek">Dostępne sale: 5</a><a class="admin-slot free" href="nauczyciel_formularz-terminu.html" aria-label="Otwórz rezerwację terminu 8:00-10:00 w piątek">Dostępne sale: 5</a>
+        <div class="time">10:00-12:00</div><div class="admin-slot busy"><strong>Pitagoras</strong><br>Sala: 3</div><a class="admin-slot free" href="nauczyciel_formularz-terminu.html" aria-label="Otwórz rezerwację terminu 10:00-12:00 we wtorek">Dostępne sale: 2</a><a class="admin-slot free" href="nauczyciel_formularz-terminu.html" aria-label="Otwórz rezerwację terminu 10:00-12:00 w środę">Dostępne sale: 2</a><a class="admin-slot free" href="nauczyciel_formularz-terminu.html" aria-label="Otwórz rezerwację terminu 10:00-12:00 w czwartek">Dostępne sale: 2</a><a class="admin-slot free" href="nauczyciel_formularz-terminu.html" aria-label="Otwórz rezerwację terminu 10:00-12:00 w piątek">Dostępne sale: 2</a>
+        <div class="time">12:00-14:00</div><a class="admin-slot free" href="nauczyciel_formularz-terminu.html" aria-label="Otwórz rezerwację terminu 12:00-14:00 w poniedziałek">Dostępne sale: 2</a><a class="admin-slot free" href="nauczyciel_formularz-terminu.html" aria-label="Otwórz rezerwację terminu 12:00-14:00 we wtorek">Dostępne sale: 2</a><div class="admin-slot busy"><strong>Sala zajęta</strong><br>Dostępne sale: 0</div><div class="admin-slot busy"><strong>Sala zajęta</strong><br>Dostępne sale: 0</div><a class="admin-slot free" href="nauczyciel_formularz-terminu.html" aria-label="Otwórz rezerwację terminu 12:00-14:00 w piątek">Dostępne sale: 2</a>
+        <div class="time">14:00-16:00</div><a class="admin-slot free" href="nauczyciel_formularz-terminu.html" aria-label="Otwórz rezerwację terminu 14:00-16:00 w poniedziałek">Dostępne sale: 5</a><a class="admin-slot free" href="nauczyciel_formularz-terminu.html" aria-label="Otwórz rezerwację terminu 14:00-16:00 we wtorek">Dostępne sale: 5</a><a class="admin-slot free" href="nauczyciel_formularz-terminu.html" aria-label="Otwórz rezerwację terminu 14:00-16:00 w środę">Dostępne sale: 5</a><a class="admin-slot free" href="nauczyciel_formularz-terminu.html" aria-label="Otwórz rezerwację terminu 14:00-16:00 w czwartek">Dostępne sale: 5</a><a class="admin-slot free" href="nauczyciel_formularz-terminu.html" aria-label="Otwórz rezerwację terminu 14:00-16:00 w piątek">Dostępne sale: 5</a>
+        <div class="time">16:00-18:00</div><a class="admin-slot free" href="nauczyciel_formularz-terminu.html" aria-label="Otwórz rezerwację terminu 16:00-18:00 w poniedziałek">Dostępne sale: 5</a><a class="admin-slot free" href="nauczyciel_formularz-terminu.html" aria-label="Otwórz rezerwację terminu 16:00-18:00 we wtorek">Dostępne sale: 5</a><a class="admin-slot free" href="nauczyciel_formularz-terminu.html" aria-label="Otwórz rezerwację terminu 16:00-18:00 w środę">Dostępne sale: 5</a><a class="admin-slot free" href="nauczyciel_formularz-terminu.html" aria-label="Otwórz rezerwację terminu 16:00-18:00 w czwartek">Dostępne sale: 5</a><a class="admin-slot free" href="nauczyciel_formularz-terminu.html" aria-label="Otwórz rezerwację terminu 16:00-18:00 w piątek">Dostępne sale: 5</a>
+    </div>
+</section>
+
+</main>
+</body>
+</html>

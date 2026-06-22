@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<title>Squola - Nauczyciel - Podgląd zajęć</title>
+</head>
+<body>
+<aside class="sidebar">
+    <a class="logo" href="nauczyciel_index.html" aria-label="Squola - strona główna nauczyciela">
+        <div class="logo-icon">SQ</div>
+        <div class="logo-text">Squola</div>
+    </a>
+    <nav class="menu" aria-label="Menu nauczyciela">
+        <a class="" href="nauczyciel_index.html"><span>🏠</span>Start</a>
+<a class="active" href="nauczyciel_plan-zajec.html"><span>📅</span>Plan zajęć</a>
+<a class="" href="nauczyciel_aktualne-zajecia.html"><span>✅</span>Aktualne zajęcia</a>
+<a class="" href="nauczyciel_rezerwuj-terminy.html"><span>🕒</span>Zarezerwuj terminy</a>
+<a class="" href="nauczyciel_uczniowie.html"><span>👥</span>Uczniowie</a>
+    </nav>
+    <div class="sidebar-footer">
+        Profil nauczyciela<br>
+        <strong>Pitagoras</strong>
+    </div>
+</aside>
+<main class="main">
+    <section class="header">
+        <div>
+            <h1>Podgląd zajęć</h1>
+            <p>Szczegóły lekcji z możliwością oznaczenia obecności</p>
+        </div>
+        <div class="user">
+            <small>Zalogowano jako</small>
+            <strong>Pitagoras</strong>
+            <a href="#">Zmień profil</a>
+        </div>
+    </section>
+
+<section class="details-layout">
+    <article class="card">
+        <h2>Podgląd zajęć</h2>
+        <div class="summary-table">
+            <div>Dzień</div><div>Poniedziałek</div>
+            <div>Godzina</div><div>12:00-14:00</div>
+            <div>Sala</div><div>3</div>
+            <div>Przedmiot</div><div>Matematyka</div>
+            <div>Uczeń</div><div>Jan Kowalski</div>
+            <div>Numer</div><div>222 333 444</div>
+        </div>
+        <div class="action-bar"><button class="btn danger" type="button">Anuluj zajęcia</button><a class="btn secondary" href="nauczyciel_plan-zajec.html">Wróć</a></div>
+    </article>
+    <aside class="card">
+        <h2>Informacje lekcyjne</h2>
+        <label>Sprawdź obecność</label>
+        <div class="attendance"><label><input type="radio" name="attendance"> Obecny</label><label><input type="radio" name="attendance"> Nieobecny</label></div>
+        <h3>Ostatnie zadania</h3>
+        <div class="tasks-box">1, 2, 3, 4, 5 / str. 127<br>12, 16, 17 / str. 130</div>
+        <h3 style="margin-top:18px;">Uwagi</h3>
+        <div class="tasks-box">Brak</div>
+        <h3 style="margin-top:18px;">Zrobione zadania</h3>
+        <textarea placeholder="Wpisz wykonane zadania..."></textarea>
+    </aside>
+</section>
+
+</main>
+</body>
+</html>
